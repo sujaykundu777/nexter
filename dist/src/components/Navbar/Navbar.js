@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -7,9 +9,13 @@ exports["default"] = void 0;
 
 var _link = _interopRequireDefault(require("next/link"));
 
-var _react = require("react");
+var _react = _interopRequireWildcard(require("react"));
 
 var _NavbarModule = _interopRequireDefault(require("./Navbar.module.css"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -39,71 +45,73 @@ var Navbar = function Navbar(props) {
     }
   };
 
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].nav
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].navWrapper
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].navWrapperInner
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].navLeftPart
-  }, /*#__PURE__*/React.createElement("h1", {
+  }, /*#__PURE__*/_react["default"].createElement(_link["default"], {
+    href: "/"
+  }, /*#__PURE__*/_react["default"].createElement("a", {
     className: _NavbarModule["default"].navBrand
-  }, " MyApp")), /*#__PURE__*/React.createElement("div", {
+  }, "Nexter"))), /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].navRightPart
-  }, /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/_react["default"].createElement("input", {
     id: "toggler",
     className: _NavbarModule["default"].toggler,
     type: "checkbox",
     onChange: handleMenuClick
-  }), /*#__PURE__*/React.createElement("label", {
+  }), /*#__PURE__*/_react["default"].createElement("label", {
     htmlFor: "toggler",
     className: _NavbarModule["default"].burger
-  }, isMenuOpen ? /*#__PURE__*/React.createElement("span", {
+  }, isMenuOpen ? /*#__PURE__*/_react["default"].createElement("span", {
     className: _NavbarModule["default"].change
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].bar1
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].bar2
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].bar3
-  })) : /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("div", {
+  })) : /*#__PURE__*/_react["default"].createElement("span", null, /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].bar1
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].bar2
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].bar3
-  }))), /*#__PURE__*/React.createElement("ul", {
+  }))), /*#__PURE__*/_react["default"].createElement("ul", {
     className: _NavbarModule["default"].navLinks
-  }, /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/"
-  }, /*#__PURE__*/React.createElement("a", null, "Home")), /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Home")), /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/about"
-  }, /*#__PURE__*/React.createElement("a", null, "About")), /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "About")), /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/blog"
-  }, /*#__PURE__*/React.createElement("a", null, "Blog")), /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Blog")), /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/portfolio"
-  }, /*#__PURE__*/React.createElement("a", null, "Portfolio")), /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Portfolio")), /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/products"
-  }, /*#__PURE__*/React.createElement("a", null, "Products")), /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Products")), /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/contact"
-  }, /*#__PURE__*/React.createElement("a", null, "Contact"))))), isMenuOpen && /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Contact"))))), isMenuOpen && /*#__PURE__*/_react["default"].createElement("div", {
     className: _NavbarModule["default"].toggleMenu
-  }, /*#__PURE__*/React.createElement("ul", {
+  }, /*#__PURE__*/_react["default"].createElement("ul", {
     className: _NavbarModule["default"].toggleNavLinks
-  }, /*#__PURE__*/React.createElement("li", null, " ", /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("li", null, " ", /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/"
-  }, /*#__PURE__*/React.createElement("a", null, "Home")), " "), /*#__PURE__*/React.createElement("li", null, " ", /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Home")), " "), /*#__PURE__*/_react["default"].createElement("li", null, " ", /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/about"
-  }, /*#__PURE__*/React.createElement("a", null, "About")), " "), /*#__PURE__*/React.createElement("li", null, " ", /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "About")), " "), /*#__PURE__*/_react["default"].createElement("li", null, " ", /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/blog"
-  }, /*#__PURE__*/React.createElement("a", null, "Blog")), " "), /*#__PURE__*/React.createElement("li", null, " ", /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Blog")), " "), /*#__PURE__*/_react["default"].createElement("li", null, " ", /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/portfolio"
-  }, /*#__PURE__*/React.createElement("a", null, "Portfolio")), " "), /*#__PURE__*/React.createElement("li", null, " ", /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Portfolio")), " "), /*#__PURE__*/_react["default"].createElement("li", null, " ", /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/products"
-  }, /*#__PURE__*/React.createElement("a", null, "Products")), " "), /*#__PURE__*/React.createElement("li", null, " ", /*#__PURE__*/React.createElement(_link["default"], {
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Products")), " "), /*#__PURE__*/_react["default"].createElement("li", null, " ", /*#__PURE__*/_react["default"].createElement(_link["default"], {
     href: "/contact"
-  }, /*#__PURE__*/React.createElement("a", null, "Contact")))))));
+  }, /*#__PURE__*/_react["default"].createElement("a", null, "Contact")))))));
 };
 
 var _default = Navbar;

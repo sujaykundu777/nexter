@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 
 const Navbar = props => {
@@ -19,7 +19,7 @@ const Navbar = props => {
             <div className={styles.navWrapper}>
                 <div className={styles.navWrapperInner}>
                     <div className={styles.navLeftPart}>
-                        <h1 className={styles.navBrand}> MyApp</h1>
+                      <Link href='/'><a className={styles.navBrand}>Nexter</a></Link>
                     </div>
                     <div className={styles.navRightPart}>
                     <input id="toggler" className={styles.toggler} type="checkbox" onChange={handleMenuClick}/>
