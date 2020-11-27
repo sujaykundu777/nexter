@@ -48,7 +48,7 @@ const News = ({news}) => {
 News.getInitialProps = async ({query}) => {
     let news;
     try{
-        const resp = await fetch(`http://hn.algolia.com/api/v1/search?query=${query.searchTerm}`);
+        const resp = await fetch(`https://hn.algolia.com/api/v1/search?query=${query.searchTerm}`);
         news = await resp.json();
     }catch(err){
         console.log("Error", err);
