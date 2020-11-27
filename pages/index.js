@@ -7,10 +7,14 @@ export default function Home() {
     alert('do something');
   }
   return (
-      <Layout title="Welcome to Nexter">
+      <Layout
+         title="Welcome to Nexter"
+         footer={`Copyright ${new Date().getFullYear()}`}
+        >
           <h1 className={styles.title}>
              Welcome to <a href="/">Nexter</a>
          </h1>
+         <p> A NextJS Starter Kit</p>
           <Button variant="dark" size="lg" label="Get Started" disabled={false} onClick={handleClick} />
       </Layout>
   )

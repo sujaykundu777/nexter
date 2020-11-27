@@ -9,6 +9,8 @@
     color: #4200ff;
     font-weight: bold;
     font-size: 1.6em;
+    width:200px;
+    height:60px;
 }
 .nav a{
     padding: 0 15px;

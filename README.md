@@ -31,6 +31,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Using Custom CDNs
+
+You can add custom CDNs links at pages/_document.js inside <Head>
+
 ## Bit
 
 `bit add src/components/Navbar`

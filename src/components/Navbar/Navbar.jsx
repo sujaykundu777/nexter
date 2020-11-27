@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
@@ -19,7 +20,11 @@ const Navbar = props => {
             <div className={styles.navWrapper}>
                 <div className={styles.navWrapperInner}>
                     <div className={styles.navLeftPart}>
-                      <Link href='/'><a className={styles.navBrand}>Nexter</a></Link>
+                      <Link href='/'>
+                          <a className={styles.navBrand}>
+                              <Image src="/logo.png" alt="nexter logo" width="200px" height="80px" />
+                          </a>
+                      </Link>
                     </div>
                     <div className={styles.navRightPart}>
                     <input id="toggler" className={styles.toggler} type="checkbox" onChange={handleMenuClick}/>
@@ -43,6 +48,7 @@ const Navbar = props => {
                         <Link href='/blog'><a>Blog</a></Link>
                         <Link href='/portfolio'><a>Portfolio</a></Link>
                         <Link href='/products'><a>Products</a></Link>
+                        <Link href="/news"><a>News</a></Link>
                         <Link href='/contact'><a>Contact</a></Link>
                     </ul>
                   </div>
@@ -55,6 +61,7 @@ const Navbar = props => {
                             <li> <Link href='/blog'><a>Blog</a></Link> </li>
                             <li> <Link href='/portfolio'><a>Portfolio</a></Link> </li>
                             <li> <Link href='/products'><a>Products</a></Link> </li>
+                            <li><Link href="/news"><a>News</a></Link></li>
                             <li> <Link href='/contact'><a>Contact</a></Link></li>
                         </ul>
                       </div>

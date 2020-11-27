@@ -4,9 +4,12 @@ import styles from '../styles/Home.module.css';
 
 export default function Contact() {
   return (
-      <Layout title="Contact - MyApp">
+      <Layout
+          title="Contact - Nexter"
+          footer={`Copyright ${new Date().getFullYear()}`}
+      >
           <h1 className={styles.title}>
-            Contact <a href="https://sujaykundu.com">MyApp</a>
+            Contact <a href="/">Nexter</a>
          </h1>
          <Button variant="primary" size="lg" label="Contact Me"/>
       </Layout>
